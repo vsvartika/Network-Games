@@ -13,7 +13,7 @@ addpath('Arbitrary_code')
 
 %% Input -- classes and information graph
 
-k = 3;  %k \in {2,3}
+k = 2;  %k \in {2,3}
 
 if k ==2
     c1 = 6;
