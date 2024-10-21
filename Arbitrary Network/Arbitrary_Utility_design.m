@@ -13,11 +13,11 @@ addpath('Arbitrary_code')
 
 %% Input -- classes and information graph
 
-k = 2;  %k \in {2,3}
+k = 3;  %k \in {2,3}
 
 if k ==2
-    c1 = 6;
-    c2 = 15;
+    c1 = 2;
+    c2 = 2;
 
     C = [c1,  c2];
 
@@ -31,13 +31,13 @@ if k ==2
     N2 = sum(N(2,:).*C);
 elseif k==3
     c1 = 5;
-    c2 = 4;
-    c3 = 8;
+    c2 = 5;
+    c3 = 5;
 
     C = [c1,  c2, c3];
 
-    N = [1    0   1;
-         1    1   1;
+    N = [1    0   0;
+         1    1   0;
          1    1   1];
     n = sum(C);                      %no of players
 
@@ -63,8 +63,8 @@ F = ones(k,n);
 F(:,:) = NaN;
 
 % last entry  --  1 for marginal contribution, 2 for equal share, 3 for all f being 1
-F(1,1:N1) = Generate_f(N1,w,1);
-F(2,1:N2) = Generate_f(N2,w,1);
+F(1,1:N1) = Generate_f(N1,w,2);
+F(2,1:N2) = Generate_f(N2,w,2);
 if k ==3
     F(3,1:N3) = Generate_f(N3,w,2);
 end

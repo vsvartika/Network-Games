@@ -9,7 +9,7 @@
 %       `w'         1xn         Basis function -- all the components>0
 %--------------------------------------------------------------------------
 
-%---------------------------------------------------
+%--------------------------------------------------------------------------
 %  LP Matrices details
 %  Default -- min c^Tx subject to Ax<=B
 %
@@ -21,7 +21,7 @@
 %     total k + |IR| constraint                              
 %        k     constraints       to ensure lambda_j >= 0 for each j = 1,...,k
 %       |IR|   constraints       for the LP    
-%-------------------------------------------------------
+%--------------------------------------------------------------------------
 
 function[poa] = ArbitraryComputingPoA(C,N,F,w, platform)
 
@@ -83,7 +83,7 @@ function[poa] = ArbitraryComputingPoA(C,N,F,w, platform)
         b = zeros(1,k);
         
         for j = 1:k
-            idx = 3*j-2;
+            idx  = 3*j-2;
             a(j) = IR(t,idx);
             x(j) = IR(t,idx+1);
             b(j) = IR(t,idx+2);            
