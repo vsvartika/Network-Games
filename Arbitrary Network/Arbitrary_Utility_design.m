@@ -30,15 +30,15 @@ if k ==2
     N1 = sum(N(1,:).*C);            
     N2 = sum(N(2,:).*C);
 elseif k==3
-    c1 = 5;
-    c2 = 5;
-    c3 = 5;
+    c1 = 4;
+    c2 = 4;
+    c3 = 4;
 
     C = [c1,  c2, c3];
 
-    N = [1    0   0;
-         1    1   0;
-         1    1   1];
+    N = [1    1   0;
+         0    1   0;
+         1    0   1];
     n = sum(C);                      %no of players
 
     %no of agents observed by agents in various classes
