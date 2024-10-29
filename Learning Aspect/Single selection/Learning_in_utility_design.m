@@ -47,8 +47,8 @@ elseif k==3
     c2 = 4;
     c3 = 4;
     C = [c1,  c2, c3];
-    N = [1    0   0;
-         1    1   0;
+    N = [1    1   0;
+         1    1   1;
          1    1   1];
     n = sum(C);                      %no of players
     %no of agents observed by agents in various classes
@@ -86,7 +86,7 @@ end
 fprintf('\n Initial action profile')
 disp(a)
 tol =0.01;
-tot_iter = 100;
+tot_iter = 10;
 W_arr = zeros(1,tot_iter*n);
 idx =1;
 for iter =1:tot_iter

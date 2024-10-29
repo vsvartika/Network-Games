@@ -10,7 +10,8 @@ function[A,V_r,N_a] = GenerateGame(n)
     A = zeros(n,m_N_a);
     A(:,:) =NaN;
     for i = 1:n
-        idx = randperm(N_r);
-        A(i,1:N_a(i)) = idx(1:N_a(i));
+        % idx = randperm(N_r);
+        % A(i,1:N_a(i)) = idx(1:N_a(i));
+        A(i,1:N_a(i)) = randsample(N_r,N_a(i));
     end
 end

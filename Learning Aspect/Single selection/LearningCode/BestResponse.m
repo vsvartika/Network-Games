@@ -7,6 +7,11 @@ function[ai] = BestResponse(i,a_minus_i,V_r,A,F,N,C,Ni)
     [~,idx] = max(utils);
 
     l_idx = length(idx);
+
+    if l_idx >1
+        fprintf('\n best repsonse not unique')
+    end
+
     i_idx = randi(l_idx,1,1);
     ai = idx(i_idx);  
     fprintf('\nThe utilties for player %d --',i)
