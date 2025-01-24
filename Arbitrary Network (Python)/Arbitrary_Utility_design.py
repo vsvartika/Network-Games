@@ -4,7 +4,7 @@ import ArbitraryCode as ac
 
 
 # Number of classes, players in various classes, Information Graph
-k = 3;   #k should take vlaue in {2,3}
+k = 2;   #k should take vlaue in {2,3}
 if k==2:
   c1 = 2
   c2 = 2
